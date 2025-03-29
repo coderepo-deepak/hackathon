@@ -5,6 +5,7 @@ metadata:
 spec:
   selector:
     app: patient-service
+  type: LoadBalancer
   ports:
     - protocol: TCP
       port: 80
@@ -17,9 +18,8 @@ metadata:
 spec:
   selector:
     app: appointment-service
+  type: LoadBalancer
   ports:
     - protocol: TCP
       port: 80
       targetPort: 3001
-
-#########
