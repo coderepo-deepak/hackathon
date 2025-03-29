@@ -1,0 +1,32 @@
+# name: Deploy to EKS
+
+# on:
+#   push:
+#     branches:
+#       - main
+#     paths:
+#       - 'k8s/**'
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout Code
+#         uses: actions/checkout@v2
+
+#       - name: Set up kubectl
+#         uses: actions/setup-kubectl@v2
+
+#       - name: Configure kubectl
+#         run: |
+#           aws eks --region us-west-2 update-kubeconfig --name my-cluster
+#         env:
+#           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#           AWS_REGION: us-west-2
+
+#       - name: Apply Kubernetes Manifests
+#         run: |
+#           kubectl apply -f k8s/deployment.yaml
+#           kubectl apply -f k8s/service.yaml
+#           kubectl apply -f k8s/ingress.yaml
