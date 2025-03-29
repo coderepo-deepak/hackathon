@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set up kubectl
-        uses: actions/setup-kubectl@v2  # Official GitHub action for kubectl setup
+        uses: actions/setup-kubectl@v1  # Using v1 since v2 is unrecognized
 
       - name: Configure kubectl
         run: |
