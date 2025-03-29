@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: patient-service
-          image: <your_ecr_repo>/patient-service:latest
+          image: 539935451710.dkr.ecr.us-west-2.amazonaws.com/patient-service:latest
           ports:
             - containerPort: 3000
 ---
@@ -34,6 +34,6 @@ spec:
     spec:
       containers:
         - name: appointment-service
-          image: <your_ecr_repo>/appointment-service:latest
+          image: 539935451710.dkr.ecr.us-west-2.amazonaws.com/appointment-service:latest
           ports:
             - containerPort: 3001
